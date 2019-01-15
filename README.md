@@ -32,10 +32,17 @@ Create a file on your Desktop named FreeDOS.desktop
 Edit with text editor, it should contain the following:
 
 [Desktop Entry]
+
 Name=FreeDOS
+
 Icon=/usr/share/pixmaps/gksu-debian.xpm
+
 Exec=sudo qemu-system-i386 -m 16 -k en-us -rtc base=localtime -soundhw sb16,adlib -device cirrus-vga -hda freedos.img -cdrom FD12CD.iso -boot order=c​
+
 Type=Application
+
 Encoding=UTF-8
+
 Terminal=True
+
 Categories=Application;
