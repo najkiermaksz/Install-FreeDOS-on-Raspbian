@@ -28,6 +28,7 @@ qemu-system-i386 -m 16 -k en-us -rtc base=localtime -soundhw sb16,adlib -device 
 8. Done!
 
 Create a shortcut for your FreeDOS virtual system (OPTIONAL)
+
 Create a file on your Desktop named FreeDOS.desktop
 Edit with text editor, it should contain the following:
 
@@ -46,3 +47,18 @@ Encoding=UTF-8
 Terminal=True
 
 Categories=Application;
+
+
+Copy from host machine to Virtual FreeDOS:
+
+mkdir -p /mnt/freedos
+
+mount -t msdos -o loop,offset=32256 freedos.img /mnt/freedos
+
+cp yourdirectory -r /mnt/freedos
+
+umount /mnt/freedos
+
+
+
+Reminder: never mount the image while QEMU is using it and remember to unmount it before starting QEMU again!
